@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header } from "../components/Header";
 
 export default function Home() {
   return (
@@ -6,8 +7,8 @@ export default function Home() {
       <Head>
         <title>B.Müller &bull; Portfolio</title>
       </Head>
-      <main className="dark:bg-zinc-800 bg-zinc-200 py-12 xl:px-24 w-screen h-screen">
-        <h1 className="text-9xl text-zinc-50">Batata</h1>
+      <main className="dark:bg-zinc-800 bg-zinc-200">
+        <Header />
       </main>
     </>
   )

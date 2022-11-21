@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Navbar() {
   return (
     <nav className="sticky h-12 py-8 lg:flex-row flex-col dark:bg-zinc-800 bg-zinc-200 flex gap-4 justify-between items-center xl:px-24 dark:text-zinc-100">
@@ -7,10 +9,10 @@ export function Navbar() {
       </div>
 
       <ul className="flex md:gap-8 gap-4 font-title-serif text-base tracking-wider">
-        <li><a href="">About</a></li>
-        <li>Projects</li>
-        <li>Contact</li>
-        <li className="font-bold">Resume</li>
+        <li><Link href="/">About</Link></li>
+        <li><Link href="/projects">Projects</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
+        <li className="font-bold"><Link href="/">Resume</Link></li>
       </ul>
     </nav>
   )
