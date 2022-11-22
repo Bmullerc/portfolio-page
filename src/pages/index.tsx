@@ -9,9 +9,9 @@ export default function Home(props: any) {
   const [theme, setTheme] = useState(props.CookieTheme)
 
   useEffect(() => {
-    if (theme === "light") {
+    if (theme === "dark") {
       document.body.classList.add('dark')
-    } if (theme === "dark") {
+    } if (theme === "light") {
       document.body.classList.remove('dark')
     }
   }, [theme])
@@ -52,9 +52,16 @@ export default function Home(props: any) {
 export async function getServerSideProps(context: any) {
   const cookies = parseCookies(context)
 
+  if (!cookies) {
+    setCookie(context, "bmuller_portfolio_theme", "light", {
+      maxAge: 86400 * 7,
+      path: '/',
+    })
+  }
+
   return {
     props: {
-      CookieTheme: cookies.bmuller_portfolio_theme,
+      CookieTheme: cookies.bmuller_portfolio_theme
     },
   }
 }
