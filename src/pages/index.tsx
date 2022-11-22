@@ -52,12 +52,10 @@ export default function Home(props: any) {
 export async function getServerSideProps(context: any) {
   const cookies = parseCookies(context)
 
-  if (!cookies) {
-    setCookie(context, "bmuller_portfolio_theme", "light", {
-      maxAge: 86400 * 7,
-      path: '/',
-    })
-  }
+  setCookie(context, "bmuller_portfolio_theme", "light", {
+    maxAge: 86400 * 7,
+    path: '/',
+  })
 
   return {
     props: {
