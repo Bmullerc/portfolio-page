@@ -3,7 +3,7 @@ import { GithubLogo, BehanceLogo, LinkedinLogo, DiscordLogo } from "phosphor-rea
 
 export function Socials() {
   return (
-    <aside className="flex fixed right-0 h-screen place-items-end py-48 px-8">
+    <aside className="grid fixed right-0 place-content-center bottom-0 top-0 lg:px-8 px-4">
       <ul className="font-title-serif text-zinc-50 flex flex-col gap-3">
         <li className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1"><Link href="https://github.com/Bmullerc"><GithubLogo size={24} /></Link></li>
         <li className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1"><Link href="https://www.behance.net/bernardo_muller"><BehanceLogo size={24} /></Link></li>

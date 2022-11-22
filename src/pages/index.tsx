@@ -41,7 +41,7 @@ export default function Home(props: any) {
         <Sunglasses
           size={24}
           onClick={handleChangeTheme}
-          className="absolute right-8 dark:text-zinc-200 top-5 cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform"
+          className="absolute lg:right-8 lg:top-5 right-4 top-8 dark:text-zinc-200  cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform"
         />
         <Header />
       </main>
