@@ -13,7 +13,7 @@ export function Socials() {
           whileTap={{ scale: .9, rotate: -360 }}
           whileHover={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
           className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1">
-          <Link href="https://github.com/Bmullerc">
+          <Link href="https://github.com/Bmullerc" target="_blank" rel="nofollow">
             <GithubLogo size={24} />
           </Link>
         </motion.li>
@@ -21,7 +21,7 @@ export function Socials() {
           whileTap={{ scale: .9, rotate: -360 }}
           whileHover={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
           className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1">
-          <Link href="https://www.behance.net/bernardo_muller">
+          <Link href="https://www.behance.net/bernardo_muller" target="_blank" rel="nofollow">
             <BehanceLogo size={24} />
           </Link>
         </motion.li>
@@ -29,7 +29,7 @@ export function Socials() {
           whileTap={{ scale: .9, rotate: -360 }}
           whileHover={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
           className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1">
-          <Link href="https://www.linkedin.com/in/bernardo-m%C3%BCller-086a64235/">
+          <Link href="https://www.linkedin.com/in/bernardo-m%C3%BCller-086a64235/" target="_blank" rel="nofollow">
             <LinkedinLogo size={24} />
           </Link>
         </motion.li>
@@ -37,7 +37,7 @@ export function Socials() {
           whileTap={{ scale: .9, rotate: -360 }}
           whileHover={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
           className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1">
-          <Link href="https://discordapp.com/users/Bmullerc#1080">
+          <Link href="https://discordapp.com/users/Bmullerc#1080" target="_blank" rel="nofollow">
             <DiscordLogo size={24} />
           </Link>
         </motion.li>
