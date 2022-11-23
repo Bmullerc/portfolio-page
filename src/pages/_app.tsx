@@ -4,7 +4,7 @@ import { Navbar } from '../components/Navbar'
 import { Socials } from '../components/Socials'
 import { useEffect, useState } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
-import { parseCookies, setCookie } from 'nookies'
+import { setCookie } from 'nookies'
 
 import '../styles/globals.css'
 import { Sunglasses } from 'phosphor-react'
@@ -38,10 +38,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <AnimatePresence mode='popLayout'>
+      <AnimatePresence mode='sync'>
         <Navbar key={1} />
         <Socials key={2} />
         <Sunglasses
+          key={3}
           size={24}
           onClick={handleChangeTheme}
           className="absolute z-20 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform" />
@@ -50,20 +51,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </ThemeContext.Provider>
   )
 }
-
-export async function getServerSideProps(context: any) {
-  const cookies = parseCookies(context)
-
-  setCookie(context, "bmuller_portfolio_theme", "light", {
-    maxAge: 86400 * 7,
-    path: '/',
-  })
-
-  return {
-    props: {
-      CookieTheme: cookies.bmuller_portfolio_theme
-    },
-  }
-}
-
-

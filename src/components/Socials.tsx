@@ -14,6 +14,7 @@ export function Socials() {
         <motion.li
           whileTap={{ scale: .9, rotate: -360 }}
           whileHover={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
+          whileFocus={{ scale: 1.2, rotate: 360, transition: { duration: .3 } }}
           className="dark:bg-zinc-200 dark:text-zinc-800 text-zinc-200 bg-zinc-800 rounded-full px-1 py-1">
           <Link href="https://github.com/Bmullerc" target="_blank" rel="nofollow">
             <GithubLogo size={24} />
