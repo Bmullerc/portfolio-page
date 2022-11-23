@@ -15,24 +15,24 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (theme === "dark") {
       document.body.classList.add('dark')
+      setCookie(null, "bmuller_portfolio_theme", "dark", {
+        maxAge: 86400 * 7,
+        path: '/',
+      })
     } if (theme === "light") {
       document.body.classList.remove('dark')
+      setCookie(null, "bmuller_portfolio_theme", "light", {
+        maxAge: 86400 * 7,
+        path: '/',
+      })
     }
   }, [theme])
 
   function handleChangeTheme() {
     if (theme === "light") {
       setTheme("dark")
-      setCookie(null, "bmuller_portfolio_theme", "dark", {
-        maxAge: 86400 * 7,
-        path: '/',
-      })
     } if (theme === "dark") {
       setTheme("light")
-      setCookie(null, "bmuller_portfolio_theme", "light", {
-        maxAge: 86400 * 7,
-        path: '/',
-      })
     }
   }
 
