@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion"
+import { ContactButton } from "./ContactButton";
 
 export function Navbar() {
+
   const list = {
     whileTap: { scale: .9 },
     whileHover: { scale: 1.1 }
@@ -12,11 +14,12 @@ export function Navbar() {
         <span className="font-title-serif font-medium lg:text-xl text-lg">Bernardo Müller</span>
         <h3 className="font-title-serif text-sm lg:text-base">Graphic Designer & Developer</h3>
       </div>
-
       <motion.ul className="flex md:gap-8 gap-4 font-title-serif lg:text-base text-sm tracking-wider">
         <motion.li variants={list}><Link href="/">About</Link></motion.li>
         <motion.li><Link href="/projects">Projects</Link></motion.li>
-        <motion.li><Link href="/contact">Contact</Link></motion.li>
+        <motion.li>
+          <ContactButton />
+        </motion.li>
         <motion.li className="font-bold"><Link href="/">Resume</Link></motion.li>
       </motion.ul>
     </nav>

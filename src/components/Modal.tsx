@@ -1,7 +1,15 @@
 import { motion } from "framer-motion"
+import { X } from "phosphor-react"
+import { ReactElement } from "react"
 import { Backdrop } from "./Backdrop"
 
-export function Modal({ handleClose, text }: any) {
+interface ModalProps {
+  handleClose: () => void
+  children?: ReactElement
+  modalOpen?: true | false
+}
+
+export function Modal({ handleClose, children, ...rest }: ModalProps) {
 
   const dropIn = {
     hidden: {
@@ -27,15 +35,22 @@ export function Modal({ handleClose, text }: any) {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
-        drag
         onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="w-1/2 max-w-[700px] h-1/2 max-h-[300px] bg-zinc-400 m-auto px-2 rounded-3xl flex flex-col items-center"
+        {...rest}
+        className="absolute lg:min-w-[1/2] lg:w-2/3 lg:max-w-[90%] min-w-[1/2] w-[90%] h-[2/3] min-h-[300px] bg-zinc-400 m-auto px-2 rounded-3xl flex flex-col items-center justify-center"
       >
-
+        {children}
+        <motion.button
+        whileTap={{ scale: .9, rotate: -180 }}
+        whileHover={{ scale: 1.2, rotate: 180, transition: { duration: .3 } }}
+        className="absolute top-4 right-4 mr-4 mt-4 hover:opacity-50"
+        onClick={handleClose}>
+          <X size={24} className="text-zinc-700"/>
+        </motion.button>
       </motion.div>
     </Backdrop>
   )
