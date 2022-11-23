@@ -41,7 +41,7 @@ export function Modal({ handleClose, children, ...rest }: ModalProps) {
         animate="visible"
         exit="exit"
         {...rest}
-        className="absolute lg:min-w-[1/2] lg:w-2/3 lg:max-w-[90%] min-w-[1/2] w-[90%] h-[2/3] min-h-[300px] bg-zinc-400 m-auto px-2 rounded-3xl flex flex-col items-center justify-center"
+        className="absolute lg:min-w-[1/2] lg:w-2/3 lg:max-w-[90%] min-w-[1/2] w-[90%] h-[2/3] min-h-[300px] bg-zinc-400 dark:bg-zinc-700 m-auto px-2 rounded-3xl flex flex-col items-center justify-center"
       >
         {children}
         <motion.button
@@ -49,7 +49,7 @@ export function Modal({ handleClose, children, ...rest }: ModalProps) {
         whileHover={{ scale: 1.2, rotate: 180, transition: { duration: .3 } }}
         className="absolute top-4 right-4 mr-4 mt-4 hover:opacity-50"
         onClick={handleClose}>
-          <X size={24} className="text-zinc-700"/>
+          <X size={24} className="text-zinc-700 dark:text-zinc-400"/>
         </motion.button>
       </motion.div>
     </Backdrop>
