@@ -7,7 +7,6 @@ import { ThemeContext } from '../contexts/ThemeContext'
 import { setCookie } from 'nookies'
 
 import '../styles/globals.css'
-import { Sunglasses } from 'phosphor-react'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(pageProps.CookieTheme)
@@ -17,10 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
       document.body.classList.add('dark')
     } else {
       document.body.classList.remove('dark')
-      setCookie(null, "bmuller_portfolio_theme", "light", {
-        maxAge: 86400 * 7,
-        path: '/',
-      })
     }
   }, [theme])
 
@@ -43,14 +38,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <AnimatePresence mode='sync'>
-        <Socials key={2} />
-        <Navbar key={1} />
-        <Sunglasses
-          key={3}
-          size={24}
-          onClick={handleChangeTheme}
-          className="absolute z-50 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform" />
-        <Component {...pageProps} />
+        <Socials key={1} />
+        <Navbar key={2} />
+        <Component {...pageProps} handleChangeTheme={handleChangeTheme} />
       </AnimatePresence>
     </ThemeContext.Provider>
   )
