@@ -15,11 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (theme === "dark") {
       document.body.classList.add('dark')
-      setCookie(null, "bmuller_portfolio_theme", "dark", {
-        maxAge: 86400 * 7,
-        path: '/',
-      })
-    } if (theme === "light") {
+    } else {
       document.body.classList.remove('dark')
       setCookie(null, "bmuller_portfolio_theme", "light", {
         maxAge: 86400 * 7,
@@ -31,23 +27,33 @@ export default function App({ Component, pageProps }: AppProps) {
   function handleChangeTheme() {
     if (theme === "light") {
       setTheme("dark")
+      setCookie(null, "bmuller_portfolio_theme", "dark", {
+        maxAge: 86400 * 7,
+        path: '/',
+      })
     } if (theme === "dark") {
       setTheme("light")
+      setCookie(null, "bmuller_portfolio_theme", "light", {
+        maxAge: 86400 * 7,
+        path: '/',
+      })
     }
   }
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <AnimatePresence mode='sync'>
-        <Navbar key={1} />
         <Socials key={2} />
+        <Navbar key={1} />
         <Sunglasses
           key={3}
           size={24}
           onClick={handleChangeTheme}
-          className="absolute z-20 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform" />
+          className="absolute z-50 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 duration-200 transition-transform" />
         <Component {...pageProps} />
       </AnimatePresence>
     </ThemeContext.Provider>
   )
 }
+
+

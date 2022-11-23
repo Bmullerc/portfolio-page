@@ -13,11 +13,11 @@ export default function Home(props: any) {
       </Head>
 
       <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0, y: "-100vh" }}
-        transition={{ duration: 1}}
-        className="dark:bg-zinc-800 bg-zinc-200"
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        exit={{ y: "-100vh" }}
+        transition={{ duration: .7 }}
+        className="dark:bg-zinc-800 bg-zinc-200 h-screen overflow-y-scroll"
       >
         <Header />
       </motion.main>
@@ -40,7 +40,4 @@ export async function getServerSideProps(context: any) {
     },
   }
 }
-
-
-
 

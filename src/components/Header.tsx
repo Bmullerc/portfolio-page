@@ -2,7 +2,12 @@ import { motion } from "framer-motion"
 
 export function Header() {
   return (
-    <motion.header className="dark:bg-zinc-800 bg-zinc-200 lg:h-[calc(100vh-4rem)] h-screen xl:px-48 flex place-items-center">
+    <motion.header
+      initial={{ y: "200vh" }}
+      animate={{ y: 0 }}
+      exit={{ y: "-100vh" }}
+      transition={{ delay: .7, duration: 1, type: "spring", damping: 25, stiffness: 250 }}
+      className="h-screen xl:px-48 flex place-items-center">
       <div className="md:px-48 sm:px-12 px-8 flex flex-col gap-3 font-title-sans font-bold">
         <h1 className="lg:text-7xl text-4xl text-zinc-500 dark:text-zinc-300">
           <span className="text-zinc-900 dark:text-zinc-50">Hi.</span> I am <span className="text-zinc-900 dark:text-zinc-50">Bernardo Müller</span>.
