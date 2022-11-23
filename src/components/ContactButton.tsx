@@ -12,8 +12,9 @@ export function ContactButton() {
   return (
     <>
       <motion.button
-        whileHover={{ scale: 1.2, y: -5 }}
+        whileHover={{ scale: 1.2, y: -10 }}
         whileTap={{ scale: .9 }}
+        transition={{duration: .3}}
         onClick={() => (modalOpen ? close() : open())}
       >
         Contact
@@ -21,7 +22,7 @@ export function ContactButton() {
 
       <AnimatePresence
         initial={false}
-        exitBeforeEnter={true}
+        mode="wait"
         onExitComplete={() => null}
       >
         {modalOpen

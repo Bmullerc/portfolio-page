@@ -4,10 +4,12 @@ import { motion } from "framer-motion"
 
 export function Socials() {
   return (
-    <aside className="grid fixed right-0 place-content-center bottom-0 top-0 lg:px-8 px-4">
+    <aside className="grid fixed z-10 right-0 place-content-center bottom-0 top-0 lg:px-8 px-4">
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
         className="font-title-serif text-zinc-50 flex flex-col gap-3">
         <motion.li
           whileTap={{ scale: .9, rotate: -360 }}
