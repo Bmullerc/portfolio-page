@@ -7,10 +7,13 @@ export const hygraph = new GraphQLClient(
 
 export const QUERY = gql`
   {
-    posts {
+    projects {
       id
-      title
-      coverImage {
+      name
+      slug
+      description
+      sourceCode
+      image {
         url
       }
     }
