@@ -13,6 +13,7 @@ export const QUERY = gql`
       slug
       description
       sourceCode
+      demo
       image {
         url
       }

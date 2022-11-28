@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Sunglasses } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { About } from "../components/About";
 
 export default function Home({ CookieTheme }: any) {
   const [theme, setTheme] = useState(CookieTheme)
@@ -50,7 +51,10 @@ export default function Home({ CookieTheme }: any) {
         transition={{ duration: .7 }}
         className="dark:bg-zinc-800 bg-zinc-200 h-screen overflow-y-scroll"
       >
-        <Header />
+        <div className="flex lg:flex-row flex-col justify-center">
+          <Header />
+          <About />
+        </div>
       </motion.main>
     </ThemeContext.Provider>
 

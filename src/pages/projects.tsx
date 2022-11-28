@@ -18,12 +18,15 @@ export default function Projects({ projects }: any) {
         className="dark:bg-zinc-800 min-h-screen bg-zinc-200 xl:px-48 py-20">
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl">Projects</h1>
         <ul>
-          {projects?.map(({ id, name, image, description, sourceCode }: any) => (
+          {projects?.map(({ id, name, image, description, sourceCode, demo }: any) => (
             <div key={id}>
-              {image.map((img: any) => <Image key={img.url} alt="" src={img.url} width={150} height={150} />)}
+              {image.map((img: any) =>
+                <Link key={img.url} href={demo} target="_blank" rel="nofollow">
+                  <Image alt="" src={img.url} width={150} height={150} />
+                </Link>)}
               <li >{name}</li>
               <p>{description}</p>
-              <Link href={sourceCode}>Link</Link>
+              <Link href={sourceCode}>Source code</Link>
             </div>
           ))}
         </ul>

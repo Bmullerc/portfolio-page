@@ -39,14 +39,14 @@ export function ContactButton() {
                   action="mailto:bernardo.muller.bm@gmail.com"
                   method="POST"
                   name="email-form"
-                  className="flex flex-col gap-4 pt-4 pb-20"
+                  className="flex flex-col gap-4 pt-4 pb-20 text-base"
                 >
 
                   <label htmlFor="name" className="font-semibold">Name:</label>
-                  <input type="text" name="name" id="name" className="w-fit rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-600 outline-none ring-zinc-900 transition-all duration-150" />
+                  <input type="text" name="name" id="name" className="w-fit rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-600 outline-none ring-zinc-900 transition-all duration-150 py-2 px-4" />
 
                   <label htmlFor="msg" className="font-semibold">Message:</label>
-                  <input type="text" name="msg" id="msg" className="w-50% h-16 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-600  outline-none ring-zinc-900 transition-all duration-150" />
+                  <input type="text" name="msg" id="msg" className="w-50% h-24 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-600  outline-none ring-zinc-900 transition-all duration-150 px-4" />
 
 
                 </form>
