@@ -4,6 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { hygraph, QUERY } from "../services/graphcms";
 
+interface ProjectProps {
+  id: string
+  name: string
+  image: [{ url: string }]
+  description: string
+  sourceCode: string
+  demo: string
+}
+
 export default function Projects({ projects }: any) {
   return (
     <>
@@ -18,11 +27,11 @@ export default function Projects({ projects }: any) {
         className="dark:bg-zinc-800 min-h-screen bg-zinc-200 xl:px-48 py-20">
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl">Projects</h1>
         <ul>
-          {projects?.map(({ id, name, image, description, sourceCode, demo }: any) => (
+          {projects?.map(({ id, name, image, description, sourceCode, demo }: ProjectProps) => (
             <div key={id}>
-              {image.map((img: any) =>
+              {image.map((img) =>
                 <Link key={img.url} href={demo} target="_blank" rel="nofollow">
-                  <Image alt="" src={img.url} width={150} height={150} />
+                  <Image alt="" src={img.url} width={500} height={500} />
                 </Link>)}
               <li >{name}</li>
               <p>{description}</p>
