@@ -6,7 +6,7 @@ export enum Theme {
 }
 
 export type ThemeContextProps = {
-  theme: Theme
+  theme: "dark" | "light"
   setTheme: (Theme: Theme) => void
 }
 
