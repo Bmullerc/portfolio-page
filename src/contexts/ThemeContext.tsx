@@ -13,7 +13,7 @@ export type ThemeContextProps = {
 export const ThemeContext = createContext<ThemeContextProps>(
   {
     theme: Theme.dark,
-    setTheme: theme => console.warn('no theme provider')
+    setTheme: () => console.warn('no theme provider')
   }
 )
 
