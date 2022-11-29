@@ -28,9 +28,7 @@ export function Contact() {
       >
         {modalOpen
           &&
-          <Modal
-            handleClose={close}
-          >
+          <Modal handleClose={close}>
             <ContactContent />
           </Modal>
         }
