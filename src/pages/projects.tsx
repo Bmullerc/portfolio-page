@@ -19,16 +19,16 @@ export default function Projects({ projects }: any) {
       <Head>
         <title>B.Müller &bull; Projects</title>
       </Head>
-      <motion.article
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className="dark:bg-zinc-800 dark:text-zinc-200 min-h-screen bg-zinc-200 xl:px-48 py-20 flex flex-col gap-8"
+        className="dark:bg-zinc-800 dark:text-zinc-200 font-body-sans min-h-screen bg-zinc-200 xl:px-48 py-20 flex flex-col gap-8"
       >
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl">Projects</h1>
         {projects?.map(({ id, name, image, description, sourceCode, demo }: ProjectProps) => (
-          <div key={id} className="flex flex-col gap-2 font-body-sans">
+          <article key={id} className="grid gap-2 font-body-sans">
             <h1 className="text-2xl font-bold">{name}</h1>
             {image.map((img) =>
               <Link
@@ -38,7 +38,7 @@ export default function Projects({ projects }: any) {
                 rel="nofollow"
                 className="w-fit"
               >
-                <Image alt="" src={img.url} width={500} height={500} className="border-4 rounded-md border-zinc-700 hover:grayscale-0 grayscale hover:opacity-100" />
+                <Image alt="" src={img.url} width={250} height={250} className="border-4 rounded-lg border-zinc-500 hover:grayscale-0 grayscale" />
               </Link>)}
             <p>{description}</p>
             <Link
@@ -49,9 +49,10 @@ export default function Projects({ projects }: any) {
             >
               Source code
             </Link>
-          </div>
+
+          </article>
         ))}
-      </motion.article>
+      </motion.section>
     </>
   )
 }

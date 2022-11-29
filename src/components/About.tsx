@@ -13,10 +13,10 @@ export function About() {
         <h2 className="font-bold text-3xl font-title-sans text-zinc-500">A bit about me:</h2>
         <p className="">Recently ventured into programming. Started out with Python, but soon realized that my graphic design knowledge and skills complemented front-end development perfectly and decided to pursue this path instead.</p>
 
-        <p>I like things simple in general, including my work. Introverted, calm, creative, like to draw sometimes, dogs and computer games are my passions.</p>
+        <p>I like things simple in general, including my work. Introverted, calm, creative, like to draw sometimes, dogs and computer games is how I spend my free time.</p>
       </div>
 
-      <h2 className="font-bold text-2xl font-title-sans text-zinc-500">My Stack is React, Next & Typescript.</h2>
+      <h2 className="font-bold text-2xl font-title-sans text-zinc-500">My Stack is React, Next & Typescript currently.</h2>
 
     </motion.article>
   )
