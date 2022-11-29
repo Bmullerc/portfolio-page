@@ -14,8 +14,11 @@ export function ContactContent() {
         >
 
           <label htmlFor="name" className="font-semibold text-xl dark:text-zinc-300">Name:</label>
-          <input type="text" name="name" id="name" placeholder="Your name here" className="w-fit rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
-          
+          <input type="text" name="name" id="name" placeholder="Your name here" className="w-full rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
+
+          <label htmlFor="title" className="font-semibold text-xl dark:text-zinc-300">Topic:</label>
+          <input type="text" name="title" id="title" placeholder="What do you want to talk about?" className="w-full rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
+
 
           <label htmlFor="msg" className="font-semibold text-xl dark:text-zinc-300">Message:</label>
           <input type="text" name="msg" id="msg" placeholder="Type your message here" className="w-50% h-24 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 dark:hover:ring-4 outline-none ring-zinc-50 transition-all duration-150 px-4 text-base mb-2" />
