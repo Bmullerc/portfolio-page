@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BehanceLogo, Code } from "phosphor-react";
 
 export function About() {
   return (
@@ -17,6 +18,10 @@ export function About() {
       </div>
 
       <h2 className="font-bold text-2xl font-title-sans text-zinc-500">My Stack is React, Next & Typescript currently.</h2>
+      {/* 
+      <h2 className="flex flex-row items-center gap-2 font-bold text-2xl font-title-sans text-zinc-900"><Code className="bg-zinc-900 rounded-full p-1 text-zinc-200" weight="bold" size={40} />github/bmullerc</h2>
+
+      <h2 className="flex flex-row items-center gap-2 font-bold text-2xl font-title-sans text-zinc-900"><BehanceLogo className="bg-zinc-900 rounded-full p-1 text-zinc-200" weight="bold" size={40} />behance.net/bernardo_muller</h2> */}
 
     </motion.article>
   )

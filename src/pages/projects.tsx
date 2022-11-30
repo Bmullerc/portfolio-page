@@ -26,7 +26,7 @@ export default function Projects({ projects }: any) {
         className="dark:bg-zinc-800 dark:text-zinc-200 font-body-sans min-h-screen bg-zinc-200 xl:px-48 py-20"
       >
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl">Projects</h1>
-        <div className="grid grid-cols-2 gap-y-12 gapx-4 my-8">
+        <div className="mt-10 border-l-8 border-zinc-400 px-4">
           {projects?.map(({ id, name, image, description, sourceCode, demo }: ProjectProps) => (
             <SingleProject
               key={id}
