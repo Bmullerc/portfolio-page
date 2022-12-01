@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { useState } from "react";
 import { ContactContent } from "./ContactContent";
 import { Modal } from "./Modal";
@@ -11,15 +11,12 @@ export function Contact() {
 
   return (
     <>
-      <motion.button
-        whileHover={{ scale: 1.2, y: -5 }}
-        whileTap={{ scale: .9 }}
-        transition={{ duration: .3 }}
-        whileFocus={{ scale: 1.2, y: -5 }}
+      <button
+        className="hover:scale-125 focus:scale-125 duration-300 hover:opacity-40 focus:opacity-40"
         onClick={() => (modalOpen ? close() : open())}
       >
         Contact
-      </motion.button>
+      </button>
 
       <AnimatePresence
         initial={false}

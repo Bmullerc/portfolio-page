@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export function Socials() {
   return (
-    <aside className="grid fixed z-10 right-0 place-content-center bottom-0 top-0 lg:px-8 px-4">
+    <aside className="grid place-content-center fixed z-10 lg:right-0 lg:top-0 lg:bottom-0 lg:left-auto top-4 left-0 lg:mb-0 mb-2 lg:px-8 px-4">
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

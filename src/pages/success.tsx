@@ -15,7 +15,7 @@ export default function Sucess() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
         className="dark:bg-zinc-800 h-screen bg-zinc-200 flex flex-col justify-center items-center font-body-sans text-zinc-700 dark:text-zinc-300">
-        <Image src={"/monke.png"} alt="" width={200} height={200} className="rounded-full mb-8" />
+        <Image src={"/monke.png"} alt="" width={200} height={200} className="rounded-full mb-8 grayscale" />
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl mb-2">Message sent.</h1>
         <p>Nice.</p>
 
