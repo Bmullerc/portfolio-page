@@ -20,10 +20,9 @@ export function Navbar({ handleChangeTheme }: NavbarProps) {
         <Link href="/resume" className="font-bold hover:scale-125 focus:scale-125 duration-300 hover:opacity-40 focus:opacity-40">Resume</Link>
 
         <Sunglasses
-          key={3}
           size={24}
           onClick={handleChangeTheme}
-          className="absolute z-50 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 text-zinc-900 duration-200 transition-transform" />
+          className="absolute z-50 lg:right-10 lg:top-5 right-4 top-8 dark:text-zinc-200 cursor-pointer hover:scale-125 hover:text-zinc-400 focus:scale-125 focus:text-zinc-400 text-zinc-900 duration-200 transition-transform" />
 
       </ul>
     </nav>

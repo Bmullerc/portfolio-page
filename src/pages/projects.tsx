@@ -24,7 +24,7 @@ export default function Projects({ projects }: any) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col dark:bg-zinc-800 dark:text-zinc-200 font-body-sans min-h-screen bg-zinc-200 xl:px-48 px-4 pt-48"
+        className="flex flex-col dark:bg-zinc-800 dark:text-zinc-200 font-body-sans min-h-screen bg-zinc-200 xl:px-48 px-4 pt-48 overflow-y-scroll"
       >
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl lg:text-start">Projects</h1>
         <div className="lg:mt-10 mt-4 border-l-8 border-zinc-400 lg:px-4 px-2">
