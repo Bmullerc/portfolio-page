@@ -17,7 +17,7 @@ export default function Home() {
         animate={{ y: 0 }}
         exit={{ y: "-100vh" }}
         transition={{ duration: .7 }}
-        className="dark:bg-zinc-800 bg-zinc-200 h-screen overflow-y-scroll"
+        className="dark:bg-zinc-800 bg-zinc-200 h-screen"
       >
         <div className="flex lg:flex-row flex-col justify-center">
           <Header />

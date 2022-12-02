@@ -12,6 +12,10 @@ body {
   background-color: black
 }
 
+html {
+  overflow-y: scroll;
+}
+
 /* :focus {
   outline: 4px solid rgb(161 161 170);
   outline-offset: 4px;
