@@ -10,14 +10,14 @@ export function About() {
       className="lg:pr-64 px-8 pb-12 lg:pb-0 flex place-content-center flex-col gap-6">
 
       {/* Delete or Add some stuff relevant here later */}
-      <div className="font-title-sans dark:text-zinc-500 text-zinc-600 font-bold text-4xl">
+      {/* <div className="font-title-sans dark:text-zinc-500 text-zinc-600 font-bold text-4xl">
         <h2 className="text-5xl">Todo:</h2>
         <h2>Add more Projects</h2>
         <h2>Add Resume</h2>
-      </div>
+      </div> */}
 
       <div className="flex flex-col gap-2 font-normal font-body-sans dark:text-zinc-50">
-        <h2 className="font-bold text-3xl font-title-sans dark:text-zinc-500 text-zinc-600">A bit about me:</h2>
+        <h2 className="font-bold text-4xl font-title-sans dark:text-zinc-500 text-zinc-600">A bit about me:</h2>
         <p className="">Recently ventured into programming. Started out with Python, but soon realized that my graphic design knowledge and skills complemented front-end development perfectly and decided to pursue this path instead.</p>
 
         <p>I like things simple in general, including my work. Introverted, calm, creative, like to draw sometimes, dogs and computer games is how I spend my free time.</p>
