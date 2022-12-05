@@ -3,6 +3,11 @@ import { gql } from 'graphql-request';
 
 export const hygraph = new GraphQLClient(
   'https://api-sa-east-1.hygraph.com/v2/clawcpwat3nj401t1a1u01bum/master',
+  {
+    headers: {
+      Authorization: `Bearer ${process.env.MY_HYGRAPH}`
+    }
+  }
 );
 
 export const QUERY = gql`
