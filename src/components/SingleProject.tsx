@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code, CodeSimple } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"
 
 interface SingleProjectProps {
@@ -16,9 +16,20 @@ interface SingleProjectProps {
 export function SingleProject({ name, image, demo, description, sourceCode, tags }: SingleProjectProps) {
   const [isOpen, setIsOpen] = useState(false)
 
+  const scrollRef = useRef(null)
+
   function handleClick() {
     setIsOpen(!isOpen)
   }
+
+  function scrollToBottom(scrollRef: any) {
+    scrollRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom(scrollRef)
+  }, [isOpen]);
+
 
   return (
     <article className={`font-body-sans border-r-8 ${isOpen ? "border-zinc-400" : "border-transparent"} px-4`}>
@@ -31,7 +42,7 @@ export function SingleProject({ name, image, demo, description, sourceCode, tags
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="flex lg:flex-row flex-col gap-4 items-center py-8 mb-8"
+          className="flex lg:flex-row flex-col gap-4 items-center py-8"
         >
           {image.map((img) =>
             <Link
@@ -49,12 +60,12 @@ export function SingleProject({ name, image, demo, description, sourceCode, tags
               href={sourceCode}
               target="_blank"
               rel="nofollow"
-              className="w-fit h-fit flex items-center justify-center gap-1 hover:scale-90 focus:scale-90 duration-300 hover:opacity-50 font-semibold mt-2 bg-zinc-700 text-zinc-200 rounded-sm px-1 py-[3px] mb-4"
+              className="w-fit h-fit flex items-center justify-center gap-1 hover:scale-95 focus:scale-95 duration-300 hover:opacity-50 font-semibold mt-2 bg-zinc-700 text-zinc-200 dark:text-zinc-700 dark:bg-zinc-200 rounded-sm px-1 py-[3px] mb-4"
             >
               <CodeSimple weight="bold" size={16} /> Code <Code weight="regular" size={20} />
             </Link>
             <p className="h-fit w-2/3">{description}</p>
-            <div className="grid grid-cols-3 lg:flex gap-2 font-bold text-zinc-500 mt-2">
+            <div ref={scrollRef} className="grid grid-cols-3 lg:flex gap-2 font-bold text-zinc-500 mt-2">
               {tags.map(tag =>
                 <h6 className="bg-zinc-400 rounded-sm px-1 py-[3px] text-zinc-200 text-sm mt-4 text-center" key={tag}>{tag}</h6>
               )}

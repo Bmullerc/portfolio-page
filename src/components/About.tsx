@@ -12,9 +12,6 @@ export function About() {
       {/* Delete or Add some stuff relevant here later */}
       <div className="font-title-sans dark:text-zinc-500 text-zinc-600 font-bold text-4xl">
         <h2 className="text-5xl">Todo:</h2>
-        <h2>Fix input multiline / Enter</h2>
-        <h2>Fix input Submit</h2>
-        <h2>Fix Scroll to Project</h2>
         <h2>Add more Projects</h2>
         <h2>Add Resume</h2>
       </div>
