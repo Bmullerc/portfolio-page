@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FormEvent, KeyboardEvent } from "react";
+import { KeyboardEvent } from "react";
 
 export function ContactContent() {
 

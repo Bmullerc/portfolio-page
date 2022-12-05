@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code, CodeSimple } from "phosphor-react";
-import { useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"
 
 interface SingleProjectProps {

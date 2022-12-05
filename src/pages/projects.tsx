@@ -3,6 +3,10 @@ import Head from "next/head";
 import { SingleProject } from "../components/SingleProject";
 import { hygraph, QUERY } from "../services/graphcms";
 
+interface ProjectsProps {
+  projects: []
+}
+
 interface ProjectProps {
   id: string
   name: string
@@ -13,7 +17,7 @@ interface ProjectProps {
   tags: [string]
 }
 
-export default function Projects({ projects }: any) {
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
       <Head>
