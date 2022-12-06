@@ -56,14 +56,16 @@ export function SingleProject({ name, image, demo, description, sourceCode, tags
             </Link>)}
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:px-4 py-2">
-            <Link
-              href={sourceCode}
-              target="_blank"
-              rel="nofollow"
-              className="w-fit h-fit flex items-center justify-center gap-1 hover:scale-95 focus:scale-95 duration-300 hover:opacity-50 font-semibold mt-2 bg-zinc-700 text-zinc-200 dark:text-zinc-700 dark:bg-zinc-200 rounded-sm px-1 py-[3px] mb-4"
-            >
-              <CodeSimple weight="bold" size={16} /> Code <Code weight="regular" size={20} />
-            </Link>
+            {sourceCode &&
+              <Link
+                href={sourceCode}
+                target="_blank"
+                rel="nofollow"
+                className="w-fit h-fit flex items-center justify-center gap-1 hover:scale-95 focus:scale-95 duration-300 hover:opacity-50 font-semibold mt-2 bg-zinc-700 text-zinc-200 dark:text-zinc-700 dark:bg-zinc-200 rounded-sm px-1 py-[3px] mb-4"
+              >
+                <CodeSimple weight="bold" size={16} /> Code <Code weight="regular" size={20} />
+              </Link>}
+
             <p className="h-fit w-2/3">{description}</p>
             <div ref={scrollRef} className="grid grid-cols-3 lg:flex gap-2 font-bold text-zinc-500 mt-2">
               {tags.map(tag =>

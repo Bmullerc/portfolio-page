@@ -13,7 +13,7 @@ export function ContactContent() {
     <div className="text-zinc-700 dark:text-zinc-300 dark:bg-zinc-700 flex flex-col items-center font-body-sans px-12">
       <h1 className="mt-12 font-title-sans lg:text-5xl text-4xl font-semibold">Want to get in touch?</h1>
       <div className="mt-10 font-body-sans lg:text-2xl text-xl">
-        You can message me on <Link className="font-bold hover:opacity-50" href="https://www.linkedin.com/in/bernardo-m%C3%BCller-086a64235/" target="_blank" rel="nofollow"> Linkedin</Link>,<Link className="font-bold hover:opacity-50" href="https://discordapp.com/users/Bmullerc#1080" target="_blank" rel="nofollow"> Discord </Link> or you can send me an <span className="font-bold">e-mail</span> bellow.
+        You can message me on <Link className="font-bold hover:opacity-50" href="https://www.linkedin.com/in/bemuller321/" target="_blank" rel="nofollow"> Linkedin</Link>,<Link className="font-bold hover:opacity-50" href="https://discordapp.com/users/Bmullerc#1080" target="_blank" rel="nofollow"> Discord </Link> or you can send me an <span className="font-bold">e-mail</span> bellow.
         <form
           action="https://formsubmit.co/9b4974c43bc9208f39ba2d0e86b1d226"
           method="POST"
