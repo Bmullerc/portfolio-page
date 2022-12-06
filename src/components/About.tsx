@@ -7,7 +7,7 @@ export function About() {
       animate={{ y: 0 }}
       exit={{ y: "100vh" }}
       transition={{ delay: .7, duration: 1, type: "spring", damping: 25, stiffness: 250 }}
-      className="lg:pr-64 px-8 pb-12 lg:pb-0 flex place-content-center flex-col gap-6">
+      className="lg:pr-64 px-8 pb-12 lg:pb-0 flex place-content-center flex-col gap-6 dark:bg-zinc-800 bg-zinc-200">
 
       {/* Delete or Add some stuff relevant here later */}
       {/* <div className="font-title-sans dark:text-zinc-500 text-zinc-600 font-bold text-4xl">

@@ -19,7 +19,7 @@ export default function Home() {
         transition={{ duration: .7 }}
         className="dark:bg-zinc-800 bg-zinc-200 h-screen"
       >
-        <div className="flex lg:flex-row flex-col justify-center">
+        <div className="flex lg:flex-row flex-col justify-center lg:pt-0 pt-20">
           <Header />
           <About />
         </div>
