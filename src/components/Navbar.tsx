@@ -17,7 +17,7 @@ export function Navbar({ handleChangeTheme }: NavbarProps) {
 
         <Contact />
 
-        <Link href="/resume" className="font-bold hover:scale-125 focus:scale-125 duration-300 hover:opacity-40 focus:opacity-40">Resume</Link>
+        {/* <Link href="/resume" className="font-bold hover:scale-125 focus:scale-125 duration-300 hover:opacity-40 focus:opacity-40">Resume</Link> */}
 
         <Sunglasses
           size={24}
