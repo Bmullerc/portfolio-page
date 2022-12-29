@@ -22,25 +22,20 @@ export function ContactContent() {
         >
           <div className="flex flex-col lg:flex-row gap-2 justify-center items-center mt-2">
             <label htmlFor="name" className="font-semibold text-xl dark:text-zinc-300">Name:</label>
-            <input onKeyDown={handleKeyDown} type="text" name="name" id="name" required placeholder="Your name here" className="w-full rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
+            <input onKeyDown={handleKeyDown} type="text" name="name" id="name" required placeholder="Your name here" className="rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2 w-full" />
 
             <label htmlFor="email" className="font-semibold text-xl dark:text-zinc-300">E-mail:</label>
-            <input onKeyDown={handleKeyDown} type="email" name="email" id="email" required placeholder="Your e-mail here" className="w-full rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
+            <input onKeyDown={handleKeyDown} type="email" name="email" id="email" required placeholder="Your e-mail here" className="rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2 w-full" />
           </div>
 
           <input type="hidden" name="_next" value="http://localhost:3000/success" />
 
-
-          <label htmlFor="title" className="font-semibold text-xl dark:text-zinc-300">Topic:</label>
-          <input onKeyDown={handleKeyDown} type="text" name="title" id="title" required placeholder="What do you want to talk about?" className="w-full rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2" />
-
-
           <label htmlFor="msg" className="font-semibold text-xl dark:text-zinc-300">Message:</label>
-          <textarea name="msg" id="msg" required placeholder="Your message here" className="w-50% h-24 py-2 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 dark:hover:ring-4 outline-none ring-zinc-50 transition-all duration-150 px-4 text-base mb-2 resize-none" />
+          <textarea name="msg" id="msg" required placeholder="Please type your message" className="w-50% h-36 py-2 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 dark:hover:ring-4 outline-none ring-zinc-50 transition-all duration-150 px-4 text-base mb-2 resize-none" />
 
           <button 
           type="submit"
-          className="bg-zinc-600 text-zinc-300 rounded-lg w-28 py-1 px-3 m-auto hover:text-zinc-600 hover:bg-zinc-300 focus:text-zinc-600 focus:bg-zinc-300 font-semibold">Submit</button>
+          className="bg-zinc-600 text-zinc-300 rounded-lg w-28 py-1 px-3 m-auto hover:text-zinc-600 hover:bg-zinc-300 focus:text-zinc-600 focus:bg-zinc-300 font-semibold duration-150">Submit</button>
         </form>
       </div>
     </div>

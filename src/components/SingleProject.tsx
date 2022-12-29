@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Code, CodeSimple } from "phosphor-react";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion"
 
 interface SingleProjectProps {
@@ -52,7 +52,7 @@ export function SingleProject({ name, image, demo, description, sourceCode, tags
               rel="nofollow"
               className="hover:scale-95 focus:scale-90 duration-300 ease-in-out focus:ring-8 ring-zinc-700 rounded-lg"
             >
-              <Image alt="" priority src={img.url} width={400} height={400} className="rounded-lg hover:grayscale-0 grayscale duration-300 ease-in-out lg:max-w-[400px] lg:max-h-[400px] w-auto h-auto" />
+              <Image alt="" placeholder="blur" blurDataURL="public/favicon.png" src={img.url} width={400} height={400} className="rounded-lg hover:grayscale-0 grayscale duration-300 ease-in-out lg:max-w-[400px] lg:max-h-[400px] w-auto h-auto" />
             </Link>)}
 
           <div className="flex flex-col justify-center items-center lg:items-start lg:px-4 py-2">
