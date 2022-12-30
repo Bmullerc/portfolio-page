@@ -28,7 +28,7 @@ export function ContactContent() {
             <input onKeyDown={handleKeyDown} type="email" name="email" id="email" required placeholder="Your e-mail here" className="rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 hover:ring-zinc-50 outline-none ring-zinc-50 transition-all duration-150 py-2 px-4 text-base mb-2 w-full" />
           </div>
 
-          <input type="hidden" name="_next" value="http://www.bemuller.com/success" />
+          <input type="hidden" name="_next" value="http://bemuller.com/success" />
 
           <label htmlFor="msg" className="font-semibold text-xl dark:text-zinc-300">Message:</label>
           <textarea name="msg" id="msg" required placeholder="Please type your message" className="w-50% h-36 py-2 rounded-md bg-zinc-300 focus:ring-2 hover:ring-2 dark:hover:ring-4 outline-none ring-zinc-50 transition-all duration-150 px-4 text-base mb-2 resize-none" />
