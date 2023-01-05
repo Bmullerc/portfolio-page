@@ -5,7 +5,7 @@ export enum Theme {
   dark = "dark"
 }
 
-export type ThemeContextProps = {
+type ThemeContextProps = {
   theme: Theme
   setTheme: (Theme: Theme) => void
 }
@@ -13,8 +13,6 @@ export type ThemeContextProps = {
 export const ThemeContext = createContext<ThemeContextProps>(
   {
     theme: Theme.dark,
-    setTheme: () => console.warn('no theme provider')
+    setTheme: () => Theme
   }
 )
-
-export const useTheme = () => useContext(ThemeContext);
