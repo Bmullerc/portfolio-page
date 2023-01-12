@@ -7,7 +7,7 @@ interface ProjectsProps {
   projects: []
 }
 
-interface ProjectProps {
+interface ProjectType {
   id: string
   name: string
   image: [{ url: string }]
@@ -32,7 +32,7 @@ export default function Projects({ projects }: ProjectsProps) {
       >
         <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl lg:text-start">Projects</h1>
         <div className="lg:mt-10 mt-4 border-l-8 border-zinc-400 lg:px-4 px-2">
-          {projects?.map(({ id, name, image, description, sourceCode, demo, tags }: ProjectProps) => (
+          {projects?.map(({ id, name, image, description, sourceCode, demo, tags }: ProjectType) => (
             <SingleProject
               key={id}
               name={name}
