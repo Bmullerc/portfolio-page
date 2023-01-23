@@ -30,7 +30,7 @@ export default function Projects({ projects }: ProjectsProps) {
         transition={{ duration: 1 }}
         className="flex flex-col dark:bg-zinc-800 dark:text-zinc-200 font-body-sans min-h-screen bg-zinc-200 xl:px-48 px-4 pt-48 pb-10"
       >
-        <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl lg:text-start">Projects</h1>
+        <h1 className="font-title-sans font-semibold lg:text-5xl text-4xl lg:text-start lg:mt-0 mt-4">Projects</h1>
         <div className="lg:mt-10 mt-4 border-l-8 border-zinc-400 lg:px-4 px-2">
           {projects?.map(({ id, name, image, description, sourceCode, demo, tags }: ProjectType) => (
             <SingleProject
